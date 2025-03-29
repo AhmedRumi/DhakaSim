@@ -4,6 +4,6 @@ DhakaSim is a specialized, event-based microscopic simulator designed to capture
 
 
 # Latest Publications
-1. M. M. Mushfiq et al., "“To Lane or Not to Lane?”—Comparing On-Road Experiences in Developing and Developed Countries Using a New Simulator RoadBird," in IEEE Transactions on Intelligent Transportation Systems, vol. 25, no. 8, pp. 8486-8498, Aug. 2024, doi: 10.1109/TITS.2024.3406731.
-2. A. M. S. Rumi et al., "A Tale of Side Friction Elements in Dhaka City: From Modeling Real Cases to Revealing Impacts Through Event-Based Simulation," in IEEE Access, vol. 13, pp. 37344-37360, 2025, doi: 10.1109/ACCESS.2025.3544511.
+1. M. M. Mushfiq et al., "“To Lane or Not to Lane?”—Comparing On-Road Experiences in Developing and Developed Countries Using a New Simulator RoadBird," in IEEE Transactions on Intelligent Transportation Systems, vol. 25, no. 8, pp. 8486-8498, Aug. 2024, [doi: 10.1109/TITS.2024.3406731](https://ieeexplore.ieee.org/abstract/document/10552416).
+2. A. M. S. Rumi et al., "A Tale of Side Friction Elements in Dhaka City: From Modeling Real Cases to Revealing Impacts Through Event-Based Simulation," in IEEE Access, vol. 13, pp. 37344-37360, 2025, [doi: 10.1109/ACCESS.2025.3544511](https://ieeexplore.ieee.org/abstract/document/10898009).
    
