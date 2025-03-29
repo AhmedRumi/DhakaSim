@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "libraries/commons-math3-3.6.1.jar",
+        "libraries/hadoop-core-0.20.2.jar",
+        "libraries/jmathio.jar"
+    ]
+}
