@@ -20,8 +20,9 @@ public class Processor {
 
     private static final ArrayList<Node> nodeList = new ArrayList<>();
     private static final ArrayList<Link> linkList = new ArrayList<>();
-    private final LinkedList<Pedestrian> pedestrians = new LinkedList<>();
+    private static final ArrayList<Node> intersectionList = new ArrayList<>();
 
+    private final LinkedList<Pedestrian> pedestrians = new LinkedList<>();
     private final LinkedList<Vehicle> vehicleList = new LinkedList<>();
     private final LinkedList<Object> objectList = new LinkedList<>();
 
@@ -29,7 +30,7 @@ public class Processor {
     private final ArrayList<Path> pathList = new ArrayList<>();
     private final ArrayList<Integer> nextGenerationTime = new ArrayList<>();
     private final ArrayList<Integer> numberOfVehiclesToGenerate = new ArrayList<>();
-    private final ArrayList<Node> intersectionList = new ArrayList<>();
+    
     private final Random random = Parameters.random;
     private int vehicleId = 0;
     private int objectId = 0; 
@@ -95,6 +96,10 @@ public class Processor {
 
     public static ArrayList<Link> getLinkList() {
         return linkList;
+    }
+
+    public static ArrayList<Node> getIntersectionList() {
+        return intersectionList;
     }
 
     public void autoProcess() {
@@ -1450,7 +1455,8 @@ public class Processor {
     private void controlSignal() {
         for (Node node : intersectionList) {
 //          node.adaptiveSignalChange(Parameters.simulationStep);
-            node.constantSignalChange(Parameters.simulationStep);
+            // node.constantSignalChange(Parameters.simulationStep);
+            node.automaticSignaling2(Parameters.simulationStep);
         }
     }
 

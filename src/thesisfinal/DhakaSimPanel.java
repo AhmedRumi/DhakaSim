@@ -104,6 +104,7 @@ public class DhakaSimPanel extends JPanel implements ActionListener, MouseListen
 
         if (drawRoads) {
             drawRoadNetwork(g2d);
+            drawText(g2d);
         }
 
         if (drawTrajectories) {
@@ -334,6 +335,87 @@ public class DhakaSimPanel extends JPanel implements ActionListener, MouseListen
             }
         }
     }
+
+    private void drawText(Graphics2D g2d) {
+		// Increase font size
+		Font originalFont = g2d.getFont();
+		Font largerFont = originalFont.deriveFont(80f); // Change 36f to your desired font size
+		g2d.setFont(largerFont);
+		// Set color
+		g2d.setColor(Color.RED);
+		
+		int multiplier = 15;
+		for (Node node: nodeList){
+			// System.out.println("Nodes: " + node.getId() + ", " + node.getIndex() + ", " + node.x + ", " + node.y + ", " + (int)node.x + ", " + (int)node.y + ", " + node.getX() + ", " + node.getY());
+			// g2d.drawString("Node Id: "+node.getId(), multiplier*(int)node.x, multiplier*(int)node.y);
+		}
+		
+		// for (Link link : linkList) {
+		// 	// System.out.println("Intersection Nodes: " + node.getId() + ", " + node.getIndex() + ", " + node.x + ", " + node.y + ", " + (int)node.x + ", " + (int)node.y + ", " + node.getX() + ", " + node.getY());
+		// 	if (link.getNumberOfSegments() == 1){
+		// 		String text = "("+link.getId()+", "+link.getFirstSegment().getForwardVehicleCount()
+		// 			+", "+link.getFirstSegment().getReverseVehicleCount() +")";
+		// 		g2d.drawString(text, multiplier*(int)link.getFirstSegment().getStartX(), multiplier*(int)link.getFirstSegment().getStartY());
+		// 		g2d.drawString(text, multiplier*(int)link.getFirstSegment().getEndX(), multiplier*(int)link.getFirstSegment().getEndY());
+		// 	}
+		// 	else{
+				
+		// 		// First segment
+		// 		String text = "("+link.getId()+", "+link.getFirstSegment().getForwardVehicleCount()
+		// 			+", "+link.getFirstSegment().getReverseVehicleCount() +")";
+		// 		g2d.drawString(text, multiplier*(int)link.getFirstSegment().getStartX(), multiplier*(int)link.getFirstSegment().getStartY());
+		// 		g2d.drawString(text, multiplier*(int)link.getFirstSegment().getEndX(), multiplier*(int)link.getFirstSegment().getEndY());
+		// 		// Second segment
+		// 		text = "("+link.getId()+", "+link.getLastSegment().getForwardVehicleCount()
+		// 			+", "+link.getLastSegment().getReverseVehicleCount() +")";
+		// 		g2d.drawString(text, multiplier*(int)link.getLastSegment().getStartX(), multiplier*(int)link.getLastSegment().getStartY());
+		// 		g2d.drawString(text, multiplier*(int)link.getLastSegment().getEndX(), multiplier*(int)link.getLastSegment().getEndY());
+		// 	}
+			
+		// }
+        ArrayList<Node> intersectionlist = Processor.getIntersectionList();
+		for (Node node : intersectionlist) {
+            
+			ArrayList<Integer> current_signal_times = node.getCurrentSignallingTimes();
+			System.out.println("Node id: " + node.getId() + ", Current signal: " + current_signal_times);
+			// System.out.println(node.getId() + ", " + node.numberOfLinks());
+			for (int i=0; i<node.numberOfLinks(); i++){
+				// System.out.println("Link id: " + node.getLink(i));
+				// int link_index = node.getLink(i) % node.numberOfLinks();
+				// if (node.getId()==0){
+				// 	System.out.println(i + ", " + node.getLink(i));
+				// }
+				
+				Link link = linkList.get(node.getLink(i));
+				// System.out.println("Intersection Nodes: " + node.getId() + ", " + node.getIndex() + ", " + node.x + ", " + node.y + ", " + (int)node.x + ", " + (int)node.y + ", " + node.getX() + ", " + node.getY());
+				String text = "";
+				if (link.getNumberOfSegments() == 1){
+					text = "("+ i + ", " + node.getLink(i) + ", " +current_signal_times.get(i)+", "+link.getFirstSegment().getForwardVehicleCount()
+						+", "+link.getFirstSegment().getReverseVehicleCount() +")";
+					g2d.drawString(text, multiplier*(int)link.getFirstSegment().getStartX(), multiplier*(int)link.getFirstSegment().getStartY());
+					g2d.drawString(text, multiplier*(int)link.getFirstSegment().getEndX(), multiplier*(int)link.getFirstSegment().getEndY());
+				}
+				else{
+					// First segment
+					text = "("+ i + ", " + node.getLink(i) + ", " +current_signal_times.get(i)+", "+link.getFirstSegment().getForwardVehicleCount()
+						+", "+link.getFirstSegment().getReverseVehicleCount() +")";
+					g2d.drawString(text, multiplier*(int)link.getFirstSegment().getStartX(), multiplier*(int)link.getFirstSegment().getStartY());
+					g2d.drawString(text, multiplier*(int)link.getFirstSegment().getEndX(), multiplier*(int)link.getFirstSegment().getEndY());
+					// Second segment
+					text = "("+ i + ", " + node.getLink(i) + ", " +current_signal_times.get(i)+", "+link.getLastSegment().getForwardVehicleCount()
+						+", "+link.getLastSegment().getReverseVehicleCount() +")";
+					g2d.drawString(text, multiplier*(int)link.getLastSegment().getStartX(), multiplier*(int)link.getLastSegment().getStartY());
+					g2d.drawString(text, multiplier*(int)link.getLastSegment().getEndX(), multiplier*(int)link.getLastSegment().getEndY());
+				}
+				// if (node.getId()==0){
+				// 	// System.out.println(text);
+				// }
+			}
+			
+		}
+		// Reset font to the original size
+		g2d.setFont(originalFont);
+	}
 
     @Override
     public void actionPerformed(ActionEvent e) {

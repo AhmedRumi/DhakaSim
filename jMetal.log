@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-04-02T15:18:12.070074800Z</date>
+  <millis>1743607092070</millis>
+  <nanos>74800</nanos>
+  <sequence>0</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.JMetalLogger</class>
+  <method>configureLoggers</method>
+  <thread>25</thread>
+  <message>Loggers configured with null</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.098376900Z</date>
+  <millis>1743607092098</millis>
+  <nanos>376900</nanos>
+  <sequence>1</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.248443100Z</date>
+  <millis>1743607092248</millis>
+  <nanos>443100</nanos>
+  <sequence>2</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.345181300Z</date>
+  <millis>1743607092345</millis>
+  <nanos>181300</nanos>
+  <sequence>3</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.438931700Z</date>
+  <millis>1743607092438</millis>
+  <nanos>931700</nanos>
+  <sequence>4</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.529688100Z</date>
+  <millis>1743607092529</millis>
+  <nanos>688100</nanos>
+  <sequence>5</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.619448800Z</date>
+  <millis>1743607092619</millis>
+  <nanos>448800</nanos>
+  <sequence>6</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.676296900Z</date>
+  <millis>1743607092676</millis>
+  <nanos>296900</nanos>
+  <sequence>7</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.728565200Z</date>
+  <millis>1743607092728</millis>
+  <nanos>565200</nanos>
+  <sequence>8</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.779143200Z</date>
+  <millis>1743607092779</millis>
+  <nanos>143200</nanos>
+  <sequence>9</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:12.819037600Z</date>
+  <millis>1743607092819</millis>
+  <nanos>37600</nanos>
+  <sequence>10</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.238986200Z</date>
+  <millis>1743607093238</millis>
+  <nanos>986200</nanos>
+  <sequence>11</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.289848Z</date>
+  <millis>1743607093289</millis>
+  <nanos>848000</nanos>
+  <sequence>12</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.330737600Z</date>
+  <millis>1743607093330</millis>
+  <nanos>737600</nanos>
+  <sequence>13</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.371629300Z</date>
+  <millis>1743607093371</millis>
+  <nanos>629300</nanos>
+  <sequence>14</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.411522100Z</date>
+  <millis>1743607093411</millis>
+  <nanos>522100</nanos>
+  <sequence>15</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.600036700Z</date>
+  <millis>1743607093600</millis>
+  <nanos>36700</nanos>
+  <sequence>16</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.645687100Z</date>
+  <millis>1743607093645</millis>
+  <nanos>687100</nanos>
+  <sequence>17</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.691554500Z</date>
+  <millis>1743607093691</millis>
+  <nanos>554500</nanos>
+  <sequence>18</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.730451200Z</date>
+  <millis>1743607093730</millis>
+  <nanos>451200</nanos>
+  <sequence>19</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:13.771107600Z</date>
+  <millis>1743607093771</millis>
+  <nanos>107600</nanos>
+  <sequence>20</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.000849300Z</date>
+  <millis>1743607094000</millis>
+  <nanos>849300</nanos>
+  <sequence>21</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.048723700Z</date>
+  <millis>1743607094048</millis>
+  <nanos>723700</nanos>
+  <sequence>22</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.085846400Z</date>
+  <millis>1743607094085</millis>
+  <nanos>846400</nanos>
+  <sequence>23</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.122747900Z</date>
+  <millis>1743607094122</millis>
+  <nanos>747900</nanos>
+  <sequence>24</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.160646900Z</date>
+  <millis>1743607094160</millis>
+  <nanos>646900</nanos>
+  <sequence>25</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.552611900Z</date>
+  <millis>1743607094552</millis>
+  <nanos>611900</nanos>
+  <sequence>26</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.598488400Z</date>
+  <millis>1743607094598</millis>
+  <nanos>488400</nanos>
+  <sequence>27</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.638383500Z</date>
+  <millis>1743607094638</millis>
+  <nanos>383500</nanos>
+  <sequence>28</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.678275100Z</date>
+  <millis>1743607094678</millis>
+  <nanos>275100</nanos>
+  <sequence>29</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.716174200Z</date>
+  <millis>1743607094716</millis>
+  <nanos>174200</nanos>
+  <sequence>30</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.836778Z</date>
+  <millis>1743607094836</millis>
+  <nanos>778000</nanos>
+  <sequence>31</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.880660300Z</date>
+  <millis>1743607094880</millis>
+  <nanos>660300</nanos>
+  <sequence>32</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.920553600Z</date>
+  <millis>1743607094920</millis>
+  <nanos>553600</nanos>
+  <sequence>33</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.958452200Z</date>
+  <millis>1743607094958</millis>
+  <nanos>452200</nanos>
+  <sequence>34</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:14.996350800Z</date>
+  <millis>1743607094996</millis>
+  <nanos>350800</nanos>
+  <sequence>35</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.349785800Z</date>
+  <millis>1743607095349</millis>
+  <nanos>785800</nanos>
+  <sequence>36</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.395662600Z</date>
+  <millis>1743607095395</millis>
+  <nanos>662600</nanos>
+  <sequence>37</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.433561Z</date>
+  <millis>1743607095433</millis>
+  <nanos>561000</nanos>
+  <sequence>38</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.471016200Z</date>
+  <millis>1743607095471</millis>
+  <nanos>16200</nanos>
+  <sequence>39</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.515289800Z</date>
+  <millis>1743607095515</millis>
+  <nanos>289800</nanos>
+  <sequence>40</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.552796500Z</date>
+  <millis>1743607095552</millis>
+  <nanos>796500</nanos>
+  <sequence>41</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.588087800Z</date>
+  <millis>1743607095588</millis>
+  <nanos>87800</nanos>
+  <sequence>42</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.625535100Z</date>
+  <millis>1743607095625</millis>
+  <nanos>535100</nanos>
+  <sequence>43</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.663433Z</date>
+  <millis>1743607095663</millis>
+  <nanos>433000</nanos>
+  <sequence>44</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:15.700333900Z</date>
+  <millis>1743607095700</millis>
+  <nanos>333900</nanos>
+  <sequence>45</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.052401500Z</date>
+  <millis>1743607096052</millis>
+  <nanos>401500</nanos>
+  <sequence>46</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.098553900Z</date>
+  <millis>1743607096098</millis>
+  <nanos>553900</nanos>
+  <sequence>47</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.134459500Z</date>
+  <millis>1743607096134</millis>
+  <nanos>459500</nanos>
+  <sequence>48</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.171361500Z</date>
+  <millis>1743607096171</millis>
+  <nanos>361500</nanos>
+  <sequence>49</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.208262Z</date>
+  <millis>1743607096208</millis>
+  <nanos>262000</nanos>
+  <sequence>50</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.351616400Z</date>
+  <millis>1743607096351</millis>
+  <nanos>616400</nanos>
+  <sequence>51</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.393504900Z</date>
+  <millis>1743607096393</millis>
+  <nanos>504900</nanos>
+  <sequence>52</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.432400500Z</date>
+  <millis>1743607096432</millis>
+  <nanos>400500</nanos>
+  <sequence>53</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.471296300Z</date>
+  <millis>1743607096471</millis>
+  <nanos>296300</nanos>
+  <sequence>54</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.511191200Z</date>
+  <millis>1743607096511</millis>
+  <nanos>191200</nanos>
+  <sequence>55</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.904140400Z</date>
+  <millis>1743607096904</millis>
+  <nanos>140400</nanos>
+  <sequence>56</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.943036400Z</date>
+  <millis>1743607096943</millis>
+  <nanos>36400</nanos>
+  <sequence>57</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:16.980276800Z</date>
+  <millis>1743607096980</millis>
+  <nanos>276800</nanos>
+  <sequence>58</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.017182600Z</date>
+  <millis>1743607097017</millis>
+  <nanos>182600</nanos>
+  <sequence>59</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.054791400Z</date>
+  <millis>1743607097054</millis>
+  <nanos>791400</nanos>
+  <sequence>60</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.319247400Z</date>
+  <millis>1743607097319</millis>
+  <nanos>247400</nanos>
+  <sequence>61</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.361139200Z</date>
+  <millis>1743607097361</millis>
+  <nanos>139200</nanos>
+  <sequence>62</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.407013200Z</date>
+  <millis>1743607097407</millis>
+  <nanos>13200</nanos>
+  <sequence>63</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.477825400Z</date>
+  <millis>1743607097477</millis>
+  <nanos>825400</nanos>
+  <sequence>64</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.516719700Z</date>
+  <millis>1743607097516</millis>
+  <nanos>719700</nanos>
+  <sequence>65</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.874811400Z</date>
+  <millis>1743607097874</millis>
+  <nanos>811400</nanos>
+  <sequence>66</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.919688900Z</date>
+  <millis>1743607097919</millis>
+  <nanos>688900</nanos>
+  <sequence>67</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.956589200Z</date>
+  <millis>1743607097956</millis>
+  <nanos>589200</nanos>
+  <sequence>68</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:17.994488200Z</date>
+  <millis>1743607097994</millis>
+  <nanos>488200</nanos>
+  <sequence>69</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+<record>
+  <date>2025-04-02T15:18:18.032387300Z</date>
+  <millis>1743607098032</millis>
+  <nanos>387300</nanos>
+  <sequence>70</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator</class>
+  <method>&lt;init&gt;</method>
+  <thread>25</thread>
+  <message>Number of cores: 4</message>
+</record>
+</log>

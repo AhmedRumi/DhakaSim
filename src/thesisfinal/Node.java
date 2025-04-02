@@ -44,6 +44,7 @@ public class Node {
     void createBundles() {
         for (int linkIndex : linkList) {
             intersectionStripBundles.add(new IntersectionStripBundle(linkIndex));
+            signalling_timeList.add(Parameters.SIGNAL_CHANGE_DURATION);
         }
         changeSignalOfActiveBundleInto(SIGNAL.GREEN);
     }
@@ -168,7 +169,7 @@ public class Node {
 
     }
 
-    void automaticSignaling2() {
+    void automaticSignaling2(int simulationTime) {
         // System.out.println("Signalling timeList: " + signalling_timeList);
 
         // System.out.print("");

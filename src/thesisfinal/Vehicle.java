@@ -751,7 +751,7 @@ public class Vehicle {
         if (isReverseSegment()) {
             segment.increaseReverseVehicleCount();
         } else {
-            segment.increaseForwardVehicleCount();
+            segment.increaseForwardVehicleCount(type);
         }
     }
 
@@ -760,7 +760,7 @@ public class Vehicle {
         if (isReverseSegment()) {
             segment.decreaseReverseVehicleCount();
         } else {
-            segment.decreaseForwardVehicleCount();
+            segment.decreaseForwardVehicleCount(type);
         }
     }
 

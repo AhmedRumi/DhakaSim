@@ -78,15 +78,36 @@ public class Segment {
         return reverseVehicleCount;
     }
 
-    void increaseForwardVehicleCount() {
-        forwardVehicleCount++;
-    }
+    void increaseForwardVehicleCount(int type) {
+		
+		forwardVehicleCount++;
+		if(type<3)
+		{
+			forwardNonMototrizedVehicleCount++;
+		}
+		else
+		{
+			forwardMototrizedVehicleCount++;
+		}
+	}
+
     void increaseReverseVehicleCount() {
         reverseVehicleCount++;
     }
-    void decreaseForwardVehicleCount() {
-        forwardVehicleCount--;
-    }
+
+    void decreaseForwardVehicleCount(int type) {
+		
+		forwardVehicleCount--;
+		if(type<3)
+		{
+			forwardNonMototrizedVehicleCount--;
+		}
+		else
+		{
+			forwardMototrizedVehicleCount--;
+		}
+	}
+    
     void decreaseReverseVehicleCount() {
         reverseVehicleCount--;
     }
