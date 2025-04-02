@@ -1,6 +1,12 @@
 package thesisfinal;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.math3.ml.neuralnet.Network;
+
+import jmetal_optimization.TrafficSignalRunner;
+import jmetal_optimization.testClass;
 
 import static java.lang.Integer.min;
 
@@ -11,6 +17,8 @@ public class Node {
     double x;
     double y;
     private int timePassed;
+
+    private ArrayList<Integer> signalling_timeList = new ArrayList<>();
 
     private ArrayList<Integer> linkList = new ArrayList<>();
     ArrayList<IntersectionStrip> intersectionStripList = new ArrayList<>();
@@ -124,6 +132,63 @@ public class Node {
             timePassed = Parameters.simulationStep;
         }
     }
+
+    
+    ArrayList<Integer> getCurrentSignallingTimes(){
+    
+        // System.out.println("Node id: " + id + ", Current signal: " + signalling_timeList + ", link index: " + link_index + ", " + signalling_timeList.get(link_index));
+        return signalling_timeList;
+    }
+
+    void getNewSignallingTimes(){
+
+        List<Integer> trafficJam_Motorized = new ArrayList<>();
+        List<Integer> trafficJam_NonMotorized = new ArrayList<>();
+        int numberOfLinks = linkList.size();
+
+        
+
+        System.out.println("Node information: " + index + " " + id);
+        for(int i=0;i<linkList.size();i++)
+        {
+
+            trafficJam_Motorized.add(Processor.getLinkList().get(i).getFirstSegment().getForwardMototrizedVehicleCount());
+            trafficJam_NonMotorized.add(Processor.getLinkList().get(i).getFirstSegment().getForwardNonMototrizedVehicleCount());
+            System.out.println("Link "+i+": ");
+            System.out.println("Motorized: "+ trafficJam_Motorized.get(i));
+            System.out.println("NonMotorized: "+trafficJam_NonMotorized.get(i));
+        }
+
+        //Call optimizer        
+
+        System.out.println(">>>>>>>>>>>>>>>>>>> Before optimization, trafficJam: " + trafficJam_Motorized + " " + trafficJam_NonMotorized);
+        List<Integer> signalCycle = new TrafficSignalRunner().optimizerNSGAII(numberOfLinks, 5, 50, trafficJam_Motorized, trafficJam_NonMotorized);
+        signalling_timeList = new ArrayList<>(signalCycle);
+        System.out.println("<<<<<<<<<<<<<<<<<<< After optimization, signalcycle: " + signalling_timeList);
+
+    }
+
+    void automaticSignaling2() {
+        // System.out.println("Signalling timeList: " + signalling_timeList);
+
+        // System.out.print("");
+
+        signalling_timeList.set(activeBundleIndex,signalling_timeList.get(activeBundleIndex)-1);
+        if(signalling_timeList.get(activeBundleIndex)==0)
+        {
+            changeSignalOfActiveBundleInto(SIGNAL.RED);
+            activeBundleIndex=getNextActiveBundle();
+            if(activeBundleIndex==0)
+            {
+                getNewSignallingTimes();
+            }
+            changeSignalOfActiveBundleInto(SIGNAL.GREEN);
+
+        }
+
+    }
+
+
 
     /**
      * Non adaptive signal changing scheme; does not consider load on a link

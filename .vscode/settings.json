@@ -3,6 +3,11 @@
         "lib/**/*.jar",
         "libraries/commons-math3-3.6.1.jar",
         "libraries/hadoop-core-0.20.2.jar",
-        "libraries/jmathio.jar"
+        "libraries/jmathio.jar",
+        "libraries/commons-io-2.4.jar",
+        "libraries/jmetal-algorithm-5.4.jar",
+        "libraries/jmetal-core-5.5.jar",
+        "libraries/jmetal-exec-5.4.jar",
+        "libraries/jmetal-problem-5.4.jar"
     ]
 }

@@ -33,7 +33,10 @@ public class Segment {
     private int totalWaitingTime;
 
     private int forwardVehicleCount;
-    private int reverseVehicleCount;
+	private int reverseVehicleCount;
+
+	private int forwardMototrizedVehicleCount;
+	private int forwardNonMototrizedVehicleCount;
 
     int middleLowStripIndex;
     int middleHighStripIndex; // first strip of the 2nd side of the road
@@ -96,6 +99,17 @@ public class Segment {
         leavingVehicleCount++;
         assert leavingVehicleCount <= enteringVehicleCount;
     }
+
+    // for signalling 
+    int getForwardMototrizedVehicleCount()
+	{
+		return forwardMototrizedVehicleCount;
+	}
+
+	int getForwardNonMototrizedVehicleCount()
+	{
+		return forwardNonMototrizedVehicleCount;
+	}
 
     void increaseTotalWaitingTime(int amount) {
         totalWaitingTime += amount;

@@ -18,8 +18,8 @@ import static thesisfinal.LinkSegmentOrientation.getLinkAndSegmentOrientation;
 
 public class Processor {
 
-    private final ArrayList<Node> nodeList = new ArrayList<>();
-    private final ArrayList<Link> linkList = new ArrayList<>();
+    private static final ArrayList<Node> nodeList = new ArrayList<>();
+    private static final ArrayList<Link> linkList = new ArrayList<>();
     private final LinkedList<Pedestrian> pedestrians = new LinkedList<>();
 
     private final LinkedList<Vehicle> vehicleList = new LinkedList<>();
@@ -89,11 +89,11 @@ public class Processor {
         return objectList;
     }
 
-    public ArrayList<Node> getNodeList() {
+    public static ArrayList<Node> getNodeList() {
         return nodeList;
     }
 
-    public ArrayList<Link> getLinkList() {
+    public static ArrayList<Link> getLinkList() {
         return linkList;
     }
 
@@ -1449,7 +1449,7 @@ public class Processor {
 
     private void controlSignal() {
         for (Node node : intersectionList) {
-//            node.adaptiveSignalChange(Parameters.simulationStep);
+//          node.adaptiveSignalChange(Parameters.simulationStep);
             node.constantSignalChange(Parameters.simulationStep);
         }
     }
