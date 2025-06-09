@@ -104,7 +104,10 @@ public class DhakaSimPanel extends JPanel implements ActionListener, MouseListen
 
         if (drawRoads) {
             drawRoadNetwork(g2d);
-            drawText(g2d);
+
+            if(Parameters.SHOW_SIGNAL_DETAILS) {
+                drawText(g2d);
+            }
         }
 
         if (drawTrajectories) {

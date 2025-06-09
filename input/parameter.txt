@@ -1,5 +1,5 @@
 RandomSeed 0
-SimulationSpeed 1
+SimulationSpeed 100
 SimulationEndTime 1800
 PixelPerMeter 15
 EncounterPerAccident 0.01
@@ -10,7 +10,6 @@ GUIMode On
 DebugMode Off
 ObjectMode On
 TraceMode Off
-SignalChangeDuration 1
 DefaultTranslateX -1340
 DefaultTranslateY -580
 CenteredView On
@@ -35,7 +34,7 @@ CF_model 0
 AcrossPedestrianMode On
 AlongPedestrianMode On
 AcrossPedestrianLimit 1
-AcrossPedestrianPerHour 400
+AcrossPedestrianPerHour 500
 AlongPedestrianPerHour 50
 AlongPedestrianPercentage 99
 DensityPercentage 50
@@ -46,3 +45,6 @@ PenaltyWait On
 ConsiderMinimum On
 NoOfRoutes 12
 BrakeHard Off
+SignallingMode 3
+SignalChangeDuration 10
+ShowSignallingDetails On

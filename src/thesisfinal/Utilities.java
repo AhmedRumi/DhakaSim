@@ -647,9 +647,15 @@ class Utilities {
                     case "BrakeHard":
                         Parameters.BRAKE_HARD = value.equalsIgnoreCase("on");
                         break;
+                    case "SignallingMode":
+                        Parameters.signalling_mode = Integer.parseInt(value);
+                        break;
                     case "AcrossPedestrianPercentage":
                         System.out.println("Should change the parameter name: AcrossPedestrianPerHour");
                         assert false;
+                        break;
+                    case "ShowSignallingDetails":
+                        Parameters.SHOW_SIGNAL_DETAILS = value.equalsIgnoreCase("on");                        
                         break;
                     default:
                         break;

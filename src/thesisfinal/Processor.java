@@ -1453,11 +1453,21 @@ public class Processor {
     }
 
     private void controlSignal() {
+        
         for (Node node : intersectionList) {
-//          node.adaptiveSignalChange(Parameters.simulationStep);
-            // node.constantSignalChange(Parameters.simulationStep);
-            node.automaticSignaling2(Parameters.simulationStep);
-        }
+            if(Parameters.signalling_mode == 1)
+            {
+                node.constantSignalChange(Parameters.simulationStep);
+            }
+            else if(Parameters.signalling_mode == 2)
+            {
+                node.adaptiveSignalChange(Parameters.simulationStep);
+            }
+            else if(Parameters.signalling_mode == 3)
+            {
+                node.NSGASignaling(Parameters.simulationStep);
+            }           
+        } 
     }
 
     private SIGNAL getNextSignal(Vehicle vehicle) {

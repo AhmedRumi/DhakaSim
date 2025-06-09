@@ -55,6 +55,9 @@ public class Parameters {
     static boolean PENALTY_WAIT;
     static boolean CONSIDER_MINIMUM;
     final static int SIDE_STRIPS_TO_CONSIDER = 1;
+    static boolean SHOW_SIGNAL_DETAILS;
+
+    static int signalling_mode;
 
     static double totalTypesOfObjects = 4;
 

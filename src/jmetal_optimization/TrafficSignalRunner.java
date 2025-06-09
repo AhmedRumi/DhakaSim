@@ -24,7 +24,9 @@ import org.uma.jmetal.util.evaluator.impl.MultithreadedSolutionListEvaluator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.Collections;
 
 /**
  * Class to configure and run a generational genetic algorithm. The target problem TrafficSignalGA.
@@ -45,7 +47,7 @@ public class TrafficSignalRunner extends AbstractAlgorithmRunner {
         // new TrafficSignalRunner().optimizerGA();
         List<Integer> trafficJam_Motorized = Arrays.asList(10, 20, 15, 500);
         List<Integer> trafficJam_NonMotorized = Arrays.asList(5, 3, 4, 60);
-       new TrafficSignalRunner().optimizerNSGAII(4,0, 100, trafficJam_Motorized, trafficJam_NonMotorized);
+       new TrafficSignalRunner().optimizerNSGAII(4,5, 600, trafficJam_Motorized, trafficJam_NonMotorized);
     //    new TrafficSignalRunner().optimizerNSGAIIBinary();
     }
 
@@ -55,7 +57,9 @@ public class TrafficSignalRunner extends AbstractAlgorithmRunner {
 
         CrossoverOperator<DoubleSolution> crossover = new SBXCrossover(1.0 / problem.getNumberOfVariables(), 20.0);
 
-        MutationOperator<DoubleSolution> mutation = new PolynomialMutation(1.0 / problem.getNumberOfVariables(), 100);
+        // MutationOperator<DoubleSolution> mutation = new PolynomialMutation(1.0 / problem.getNumberOfVariables(), 100);
+        MutationOperator<DoubleSolution> mutation = new PolynomialMutation(1.0 / problem.getNumberOfVariables(), 
+        100);
 
         SelectionOperator<List<DoubleSolution>, DoubleSolution> selection = new BinaryTournamentSelection<>(new RankingAndCrowdingDistanceComparator<>());
         SolutionListEvaluator<DoubleSolution> evaluator = new MultithreadedSolutionListEvaluator<>(4, problem);
@@ -80,16 +84,48 @@ public class TrafficSignalRunner extends AbstractAlgorithmRunner {
     }
 
     private List<Integer> selectSolution_WeightedSum(List<? extends Solution<?>> population){
-        System.out.println("Hi");
+        // System.out.println("Hi");
         List<Double> weightedSum = new ArrayList<>();
-        double[] weights = {0.5, 0.5};
+        double w_f1 = 0.1;
+        double w_f2 = 1 - w_f1;
+        double[] weights = {w_f1, w_f2};
+        
+        // Normalize the objectives
+        ArrayList<Double> objective_f1 = new ArrayList<>();
+        ArrayList<Double> objective_f2 = new ArrayList<>();
         for (int i = 0; i < population.size(); i++) {
-            double f1 = population.get(i).getObjective(0);
-            double f2 = population.get(i).getObjective(0);
+            objective_f1.add(population.get(i).getObjective(0));
+            objective_f2.add(population.get(i).getObjective(1));
+        }
+        
+        
+        double f1_min = Collections.min(objective_f1);
+        double f1_max = Collections.max(objective_f1);
+        double f2_min = Collections.min(objective_f2);
+        double f2_max = Collections.max(objective_f2);
+        
+        for (int i = 0; i < population.size(); i++) {
+            double f1;
+            double f2;
+            if ( (f1_max - f1_min) == 0){
+                f1 = 0;
+            }
+            else{
+                f1 = (population.get(i).getObjective(0) - f1_min) / (f1_max - f1_min);
+            }
+            if ( (f2_max - f2_min) == 0){
+                f2 = 0;
+            }
+            else{
+                f2 = (population.get(i).getObjective(1) - f2_min) / (f2_max - f2_min);
+            }
+            // System.out.println("f2, norm f2: " + objective_f2.get(i) + ", " + f2);
+            // double f3 = population.get(i).getObjective(2);
+            // double F = weights[0]*f1 + weights[1]*f2 + weights[2]*f3;
             double F = weights[0]*f1 + weights[1]*f2;
             weightedSum.add(F);
         }
-
+        // System.out.println("weighted sum: " + weightedSum);
         // Find the minimum value and its index
         double minValue = Double.MAX_VALUE;
         int minIndex = -1;
@@ -99,7 +135,7 @@ public class TrafficSignalRunner extends AbstractAlgorithmRunner {
                 minIndex = i;
             }
         }
-
+        
         //get signal cycle at index minIndex
         List<Integer> signalCycle = new ArrayList<>();
         int numberOfLinks = population.get(0).getNumberOfVariables();

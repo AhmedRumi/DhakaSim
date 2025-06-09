@@ -155,21 +155,21 @@ public class Node {
 
             trafficJam_Motorized.add(Processor.getLinkList().get(i).getFirstSegment().getForwardMototrizedVehicleCount());
             trafficJam_NonMotorized.add(Processor.getLinkList().get(i).getFirstSegment().getForwardNonMototrizedVehicleCount());
-            System.out.println("Link "+i+": ");
-            System.out.println("Motorized: "+ trafficJam_Motorized.get(i));
-            System.out.println("NonMotorized: "+trafficJam_NonMotorized.get(i));
+            // System.out.println("Link "+i+": ");
+            // System.out.println("Motorized: "+ trafficJam_Motorized.get(i));
+            // System.out.println("NonMotorized: "+trafficJam_NonMotorized.get(i));
         }
 
         //Call optimizer        
 
-        System.out.println(">>>>>>>>>>>>>>>>>>> Before optimization, trafficJam: " + trafficJam_Motorized + " " + trafficJam_NonMotorized);
+        // System.out.println(">>>>>>>>>>>>>>>>>>> Before optimization, trafficJam: " + trafficJam_Motorized + " " + trafficJam_NonMotorized);
         List<Integer> signalCycle = new TrafficSignalRunner().optimizerNSGAII(numberOfLinks, 5, 50, trafficJam_Motorized, trafficJam_NonMotorized);
         signalling_timeList = new ArrayList<>(signalCycle);
-        System.out.println("<<<<<<<<<<<<<<<<<<< After optimization, signalcycle: " + signalling_timeList);
+        // System.out.println("<<<<<<<<<<<<<<<<<<< After optimization, signalcycle: " + signalling_timeList);
 
     }
 
-    void automaticSignaling2(int simulationTime) {
+    void NSGASignaling(int simulationTime) {
         // System.out.println("Signalling timeList: " + signalling_timeList);
 
         // System.out.print("");

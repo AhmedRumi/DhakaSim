@@ -12,8 +12,8 @@ public class TrafficSignalNSGAII extends AbstractDoubleProblem {
     /**
      * speed in terms of exporting unit traffic volume per second.
      */
-    private double heteroSpeed_Motorized = 20;
-    private double heteroSpeed_NonMotorized = 3;
+    private double heteroSpeed_Motorized = 5;
+    private double heteroSpeed_NonMotorized = 4;
 
     /**
      * Constructor Creates a default instance of the traffic signal optimization
@@ -51,15 +51,18 @@ public class TrafficSignalNSGAII extends AbstractDoubleProblem {
         setUpperLimit(upperLimit);
 
 
-        double sum = 0;
-        for (int i=0; i<getNumberOfVariables(); i++) {
-            sum += trafficJam_Motorized[i] + trafficJam_NonMotorized[i];
-        }
-        System.out.println(Arrays.toString(trafficJam_Motorized) + "; " + Arrays.toString(trafficJam_NonMotorized) + "; " + sum);
+        // double sum = 0;
+        // for (int i=0; i<getNumberOfVariables(); i++) {
+        //     sum += trafficJam_Motorized[i] + trafficJam_NonMotorized[i];
+        // }
+        // System.out.println(Arrays.toString(trafficJam_Motorized) + "; " + Arrays.toString(trafficJam_NonMotorized) + "; " + sum);
     }
 
     @Override
     public void evaluate(DoubleSolution solution) {
+
+        double motorized_weight = 0.1;
+
         double[] objectives = new double[getNumberOfObjectives()];
 
         int numberOfVariables = getNumberOfVariables();
@@ -74,37 +77,67 @@ public class TrafficSignalNSGAII extends AbstractDoubleProblem {
         System.arraycopy(trafficJam_NonMotorized, 0, updatedJam_NonMotorized, 0, numberOfVariables);
         double sumJam_Motorized = 0.0, sumJam_NonMotorized = 0.0;
         double sumTime = 0.0;
+        double sumTimeMotorized = 0.0;
+        double sumTimeNonMotorized = 0.0;
+        double total_vehicles = 0.0;
         for (int var = 0; var < numberOfVariables; var++) {
             // #consider effect of heterogeneous (motorized and nonmotorized) vehicle
-            double effective_heteroSpeed_Motorized = .25*heteroSpeed_Motorized*updatedJam_Motorized[var]/(updatedJam_Motorized[var] + updatedJam_NonMotorized[var]);
-            double motorized_passed_intersection = candidate[var] * effective_heteroSpeed_Motorized;
-            updatedJam_Motorized[var] = updatedJam_Motorized[var] - (int) motorized_passed_intersection;
+            // double effective_heteroSpeed_Motorized = .25*heteroSpeed_Motorized*updatedJam_Motorized[var]/(updatedJam_Motorized[var] + updatedJam_NonMotorized[var]);
+            // double motorized_passed_intersection = candidate[var] * effective_heteroSpeed_Motorized;
+            double motorized_passed_intersection = candidate[var] * heteroSpeed_Motorized;
+            updatedJam_Motorized[var] = updatedJam_Motorized[var] - (int) Math.ceil(motorized_passed_intersection);
             updatedJam_Motorized[var] = updatedJam_Motorized[var] < 0? 0 : updatedJam_Motorized[var];
             sumJam_Motorized += updatedJam_Motorized[var];
 
             // System.out.println("Debug: " + Arrays.toString(updatedJam_Motorized) + ", " + Arrays.toString(updatedJam_NonMotorized));
             // System.out.println("Debug: " + Arrays.toString(heteroSpeed_Motorized) + ", " + effective_heteroSpeed_Motorized);
 
-            double effective_heteroSpeed_NonMotorized = .25*heteroSpeed_NonMotorized*updatedJam_NonMotorized[var]/(updatedJam_Motorized[var] + updatedJam_NonMotorized[var]);
-            double nonMotorized_passed_intersection = candidate[var] * effective_heteroSpeed_NonMotorized;
-            updatedJam_NonMotorized[var] = updatedJam_NonMotorized[var] - (int) nonMotorized_passed_intersection;
+            // double effective_heteroSpeed_NonMotorized = .25*heteroSpeed_NonMotorized*updatedJam_NonMotorized[var]/(updatedJam_Motorized[var] + updatedJam_NonMotorized[var]);
+            // double nonMotorized_passed_intersection = candidate[var] * effective_heteroSpeed_NonMotorized;
+            double nonMotorized_passed_intersection = candidate[var] * heteroSpeed_NonMotorized;
+            updatedJam_NonMotorized[var] = updatedJam_NonMotorized[var] - (int) Math.ceil(nonMotorized_passed_intersection);
             updatedJam_NonMotorized[var] = updatedJam_NonMotorized[var] < 0? 0 : updatedJam_NonMotorized[var];
             sumJam_NonMotorized += updatedJam_NonMotorized[var];
+
+            total_vehicles += (updatedJam_Motorized[var] + updatedJam_NonMotorized[var]);
 
             for (int i = 0; i < numberOfVariables; i++) {
                 if (i != var) {
                     // double time_For_Motorized = seriesSum(updatedJam_Motorized[i]) / (1 + updatedJam_Motorized[i]) / heteroSpeed_Motorized[i];
                     // double time_For_NonMotorized = seriesSum(updatedJam_NonMotorized[i]) / (1 + updatedJam_NonMotorized[i]) / heteroSpeed_NonMotorized[i];
-                    sumTime += candidate[var];
                     // + Math.max(time_For_Motorized, time_For_NonMotorized);
+
+                    sumTime += candidate[i]*(updatedJam_Motorized[var] + updatedJam_NonMotorized[var]);
+                    // sumTime = sumTime + candidate[var] * (updatedJam_Motorized[i] + updatedJam_NonMotorized[i]);
+                    
+                    // sumTimeMotorized += candidate[var] * updatedJam_Motorized[i];
+                    // sumTimeNonMotorized += candidate[var] * updatedJam_NonMotorized[i];
                 }
             }
         }
 
-        objectives[0] = sumJam_Motorized + sumJam_NonMotorized ;
-        objectives[1] = sumTime;
+        
+        objectives[0] = motorized_weight*sumJam_Motorized + (1-motorized_weight)*sumJam_NonMotorized ;
+        if(total_vehicles == 0) {
+
+            objectives[1] = 0;
+        }
+        else{
+        
+            objectives[1] = sumTime/total_vehicles;
+        }
         solution.setObjective(0, objectives[0]);
         solution.setObjective(1, objectives[1]);
+        // System.out.println("Objectives: " + objectives[0] + objectives[1]);
+
+        // objectives[0] = sumJam_Motorized ;
+        // objectives[1] = sumJam_NonMotorized;
+        // objectives[2] = sumTimeMotorized ;
+        // objectives[3] = sumTimeNonMotorized ;
+        // solution.setObjective(0, objectives[0]);
+        // solution.setObjective(1, objectives[1]);
+        // solution.setObjective(2, objectives[2]);
+        // solution.setObjective(3, objectives[3]);
     }
 
     private double seriesSum(double max) {
